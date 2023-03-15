@@ -105,7 +105,7 @@
                                 </a>
                             </li>
                             <li class="nav-item" data-depth="0">
-                                <a class="nav-link" href="../../revapi-java/0.28.0/index.html">
+                                <a class="nav-link" href="../../revapi-java/0.28.1/index.html">
                                     <span class="nav-text">Java Analyzer</span>
                                 </a>
                             </li>
@@ -414,6 +414,9 @@
       <span class="title">Java Analyzer</span>
       <ul class="versions">
         <li class="version is-latest">
+          <a href="../../revapi-java/0.28.1/index.html">0.28.1</a>
+        </li>
+        <li class="version">
           <a href="../../revapi-java/0.28.0/index.html">0.28.0</a>
         </li>
         <li class="version">
@@ -827,7 +830,7 @@ integration is essential.</p>
                 &lt;dependency&gt;
                     &lt;groupId&gt;org.revapi&lt;/groupId&gt;
                     &lt;artifactId&gt;revapi-java&lt;/artifactId&gt;
-                    &lt;version&gt;0.28.0&lt;/version&gt;
+                    &lt;version&gt;0.28.1&lt;/version&gt;
                 &lt;/dependency&gt;
                 ...
             &lt;/dependencies&gt;
@@ -914,7 +917,7 @@ $ cd revapi-standalone-0.12.0</code></pre>
 <div class="listingblock">
 <div class="content">
 <pre>./revapi.sh \
-  --extensions=org.revapi:revapi-java:0.28.0,org.revapi:revapi-reporter-text:0.15.0 \
+  --extensions=org.revapi:revapi-java:0.28.1,org.revapi:revapi-reporter-text:0.15.0 \
   --old=my-lib-0.1.0.jar --new=my-lib-0.2.0.jar -D revapi.reporter.text.minSeverity=BREAKING</pre>
 </div>
 </div>
@@ -994,7 +997,7 @@ need to be added.</p>
     &lt;oldArchives file="mylib-1.0.jar"/&gt;
     &lt;newArchives file="mylib-1.1.jar"/&gt;
     &lt;revapiClassPath&gt;
-      &lt;pathelement location="lib/revapi-java-0.28.0-uber.jar"/&gt;
+      &lt;pathelement location="lib/revapi-java-0.28.1-uber.jar"/&gt;
     &lt;/revapiClassPath&gt;
   &lt;/revapi&gt;
 &lt;/target&gt;</code></pre>
@@ -1032,7 +1035,7 @@ revapi.analyze(analysisContext);</code></pre>
 </main>
 </div>
 <footer class="footer">
-    <p>Copyright 2014-2022 Lukas Krejci.</p>
+    <p>Copyright 2014-2023 Lukas Krejci.</p>
     <p>This site was built using <a href="https://antora.org">Antora 2.3.3</a>.</p>
 </footer>
 <script>
