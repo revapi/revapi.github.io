@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"org.revapi.reporter.text","l":"NaiveFileTemplateLoader"},{"p":"org.revapi.reporter.text","l":"TextReporter"}];updateSearchResults();

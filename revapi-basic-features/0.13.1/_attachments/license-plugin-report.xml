@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<licensePluginReport goal="FORMAT" timestamp="1744719864269">
+    <module artifactId="revapi-basic-features" groupId="org.revapi" version="0.13.1"/>
+    <files>
+        <file path="pom.xml" result="REPLACED"/>
+        <file path="src/main/java/org/revapi/basic/AbstractDifferenceReferringTransform.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/basic/ClassificationTransform.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/basic/ConfigurableElementFilter.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/basic/DifferenceMatchRecipe.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/basic/DifferencesTransform.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/basic/ExactElementMatcher.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/basic/IgnoreDifferenceTransform.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/basic/MatchingProgress.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/basic/RegexElementMatcher.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/basic/SemverIgnoreTransform.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/basic/SemverVersion.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/basic/VersionsTransform.java" result="NOOP"/>
+        <file path="src/site/antora.yml" result="NOOP"/>
+        <file path="src/site/site.xml" result="NOOP"/>
+        <file path="src/test/java/org/revapi/basic/ClassificationTransformTest.java" result="NOOP"/>
+        <file path="src/test/java/org/revapi/basic/ConfigurableElementFilterTest.java" result="NOOP"/>
+        <file path="src/test/java/org/revapi/basic/DifferencesTransformTest.java" result="NOOP"/>
+        <file path="src/test/java/org/revapi/basic/IgnoreDifferenceTransformTest.java" result="NOOP"/>
+        <file path="src/test/java/org/revapi/basic/SemverIgnoreTransformTest.java" result="NOOP"/>
+        <file path="src/test/java/org/revapi/basic/Util.java" result="NOOP"/>
+        <file path="src/test/java/org/revapi/basic/VersionsTransformTest.java" result="NOOP"/>
+    </files>
+</licensePluginReport>

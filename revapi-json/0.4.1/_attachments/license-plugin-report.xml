@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<licensePluginReport goal="FORMAT" timestamp="1744720282132">
+    <module artifactId="revapi-json" groupId="org.revapi" version="0.4.1"/>
+    <files>
+        <file path="pom.xml" result="NOOP"/>
+        <file path="src/main/java/org/revapi/json/JsonApiAnalyzer.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/json/JsonArchiveAnalyzer.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/json/JsonDifferenceAnalyzer.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/json/JsonElement.java" result="NOOP"/>
+        <file path="src/site/antora.yml" result="NOOP"/>
+        <file path="src/site/site.xml" result="NOOP"/>
+    </files>
+</licensePluginReport>

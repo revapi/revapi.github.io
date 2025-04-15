@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<licensePluginReport goal="FORMAT" timestamp="1744720131773">
+    <module artifactId="revapi-ant-task" groupId="org.revapi" version="0.13.1"/>
+    <files>
+        <file path="pom.xml" result="REPLACED"/>
+        <file path="src/main/java/org/revapi/ant/AntReporter.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/ant/FailSeverity.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/ant/FileArchive.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/ant/RevapiTask.java" result="NOOP"/>
+        <file path="src/main/resources/org/revapi/ant/antlib.xml" result="NOOP"/>
+        <file path="src/site/antora.yml" result="NOOP"/>
+        <file path="src/site/site.xml" result="NOOP"/>
+    </files>
+</licensePluginReport>

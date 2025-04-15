@@ -4,8 +4,18 @@
         <description><![CDATA[Full-featured API checker for Java and beyond]]></description>
         <link>https://revapi.org</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 15 Mar 2023 20:34:18 GMT</lastBuildDate>
-        <pubDate>Wed, 15 Mar 2023 20:34:18 GMT</pubDate>
+        <lastBuildDate>Tue, 15 Apr 2025 13:33:34 GMT</lastBuildDate>
+        <pubDate>Tue, 15 Apr 2025 13:33:34 GMT</pubDate>
+        <item>
+            <title><![CDATA[Release Notes]]></title>
+            <description><![CDATA[It's been a while since I had some time to dedicate to Revapi.
+Now that I got a few moments to spare, I was finally able to spend
+a few moments on Revapi and at long last release the new versions
+of the components.]]></description>
+            <link>https://revapi.org//revapi-site/main/news/news/20250415-release-notes.html</link>
+            <guid isPermaLink="true">https://revapi.org//revapi-site/main/news/news/20250415-release-notes.html</guid>
+            <pubDate>Tue, 15 Apr 2025 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Release Notes]]></title>
             <description><![CDATA[This is a tiny release of `revapi-java:0.28.1` that updates `log4j` dependencies coming from `classif` which itself
@@ -73,13 +83,6 @@ configured to filter out these classes.]]></description>
             <link>https://revapi.org//revapi-site/main/news/news/20210604-releases.html</link>
             <guid isPermaLink="true">https://revapi.org//revapi-site/main/news/news/20210604-releases.html</guid>
             <pubDate>Fri, 04 Jun 2021 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Bugfix release]]></title>
-            <description><![CDATA[As it has slowly become a habit lately a new release is quickly followed by a fixup.]]></description>
-            <link>https://revapi.org//revapi-site/main/news/news/20210430-bugfixes.html</link>
-            <guid isPermaLink="true">https://revapi.org//revapi-site/main/news/news/20210430-bugfixes.html</guid>
-            <pubDate>Fri, 30 Apr 2021 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>

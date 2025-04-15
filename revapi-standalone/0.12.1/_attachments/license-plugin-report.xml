@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<licensePluginReport goal="FORMAT" timestamp="1744720467814">
+    <module artifactId="revapi-standalone" groupId="org.revapi" version="0.12.1"/>
+    <files>
+        <file path="pom.xml" result="REPLACED"/>
+        <file path="src/main/assembly/distrib.xml" result="NOOP"/>
+        <file path="src/main/etc/conf/logback.xml" result="NOOP"/>
+        <file path="src/main/etc/revapi.bat" result="NOOP"/>
+        <file path="src/main/etc/revapi.sh" result="NOOP"/>
+        <file path="src/main/java/org/revapi/standalone/Main.java" result="NOOP"/>
+        <file path="src/site/antora.yml" result="NOOP"/>
+        <file path="src/site/site.xml" result="NOOP"/>
+    </files>
+</licensePluginReport>

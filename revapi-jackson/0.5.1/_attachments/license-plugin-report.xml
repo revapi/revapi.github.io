@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<licensePluginReport goal="FORMAT" timestamp="1744719943186">
+    <module artifactId="revapi-jackson" groupId="org.revapi" version="0.5.1"/>
+    <files>
+        <file path="pom.xml" result="REPLACED"/>
+        <file path="src/main/java/org/revapi/jackson/JacksonApiAnalyzer.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/jackson/JacksonArchiveAnalyzer.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/jackson/JacksonDifferenceAnalyzer.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/jackson/JacksonElement.java" result="NOOP"/>
+        <file path="src/site/antora.yml" result="NOOP"/>
+        <file path="src/site/site.xml" result="NOOP"/>
+        <file path="src/test/java/org/revapi/jackson/JacksonArchiveAnalyzerTest.java" result="NOOP"/>
+        <file path="src/test/java/org/revapi/jackson/JacksonDifferenceAnalyzerTest.java" result="NOOP"/>
+        <file path="src/test/java/org/revapi/jackson/JacksonElementTest.java" result="NOOP"/>
+    </files>
+</licensePluginReport>

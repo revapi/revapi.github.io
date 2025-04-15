@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<licensePluginReport goal="FORMAT" timestamp="1744720004818">
+    <module artifactId="revapi-java-spi" groupId="org.revapi" version="0.25.1"/>
+    <files>
+        <file path="checkstyle-suppressions.xml" result="NOOP"/>
+        <file path="pom.xml" result="REPLACED"/>
+        <file path="src/main/java-mr/9/module-info.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/java/spi/Check.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/java/spi/CheckBase.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/java/spi/Code.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/java/spi/ElementPairVisitor.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/java/spi/IgnoreCompletionFailures.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/java/spi/JarExtractor.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/java/spi/JavaAnnotationElement.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/java/spi/JavaElement.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/java/spi/JavaFieldElement.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/java/spi/JavaMethodElement.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/java/spi/JavaMethodParameterElement.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/java/spi/JavaModelElement.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/java/spi/JavaTypeElement.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/java/spi/TypeEnvironment.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/java/spi/TypeMirrorPairVisitor.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/java/spi/UseSite.java" result="NOOP"/>
+        <file path="src/main/java/org/revapi/java/spi/Util.java" result="NOOP"/>
+        <file path="src/main/resources/org/revapi/java/checks/descriptions.properties" result="NOOP"/>
+        <file path="src/main/resources/org/revapi/java/checks/names.properties" result="NOOP"/>
+        <file path="src/site/antora.yml" result="NOOP"/>
+        <file path="src/site/site.xml" result="NOOP"/>
+        <file path="src/test/java/org/revapi/java/test/BinaryNameResolutionTest.java" result="NOOP"/>
+        <file path="src/test/java/org/revapi/java/test/StringRepresentationTest.java" result="NOOP"/>
+        <file path="src/test/resources/ToStrings.java" result="NOOP"/>
+    </files>
+</licensePluginReport>
