@@ -4,8 +4,8 @@
         <description><![CDATA[Full-featured API checker for Java and beyond]]></description>
         <link>https://revapi.org</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 15 Apr 2025 13:33:34 GMT</lastBuildDate>
-        <pubDate>Tue, 15 Apr 2025 13:33:34 GMT</pubDate>
+        <lastBuildDate>Tue, 15 Apr 2025 19:51:49 GMT</lastBuildDate>
+        <pubDate>Tue, 15 Apr 2025 19:51:49 GMT</pubDate>
         <item>
             <title><![CDATA[Release Notes]]></title>
             <description><![CDATA[It's been a while since I had some time to dedicate to Revapi.
@@ -14,6 +14,14 @@ a few moments on Revapi and at long last release the new versions
 of the components.]]></description>
             <link>https://revapi.org//revapi-site/main/news/news/20250415-release-notes.html</link>
             <guid isPermaLink="true">https://revapi.org//revapi-site/main/news/news/20250415-release-notes.html</guid>
+            <pubDate>Tue, 15 Apr 2025 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Release Notes]]></title>
+            <description><![CDATA[This is a quick bugfix release of revapi-java fixing the new vararg check
+that was way too eager and incorrect flagging many false positives.]]></description>
+            <link>https://revapi.org//revapi-site/main/news/news/20250415-revapi-java-bugfix.html</link>
+            <guid isPermaLink="true">https://revapi.org//revapi-site/main/news/news/20250415-revapi-java-bugfix.html</guid>
             <pubDate>Tue, 15 Apr 2025 00:00:00 GMT</pubDate>
         </item>
         <item>
@@ -74,15 +82,6 @@ improvement where each difference now can a documentation link where it is discu
             <link>https://revapi.org//revapi-site/main/news/news/20210624-bugix-release.html</link>
             <guid isPermaLink="true">https://revapi.org//revapi-site/main/news/news/20210624-bugix-release.html</guid>
             <pubDate>Thu, 24 Jun 2021 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Release Notes]]></title>
-            <description><![CDATA[During the discussion in https://github.com/revapi/revapi/issues/221 it has come to light that Revapi doesn't behave well when
-there are some classes missing from the classpath (in that particular case, transitive provided dependencies) and Revapi is
-configured to filter out these classes.]]></description>
-            <link>https://revapi.org//revapi-site/main/news/news/20210604-releases.html</link>
-            <guid isPermaLink="true">https://revapi.org//revapi-site/main/news/news/20210604-releases.html</guid>
-            <pubDate>Fri, 04 Jun 2021 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>

@@ -104,7 +104,7 @@
                                 </a>
                             </li>
                             <li class="nav-item" data-depth="0">
-                                <a class="nav-link" href="../../../revapi-java/0.28.2/index.html">
+                                <a class="nav-link" href="../../../revapi-java/0.28.3/index.html">
                                     <span class="nav-text">Java Analyzer</span>
                                 </a>
                             </li>
@@ -431,6 +431,9 @@
       <span class="title">Java Analyzer</span>
       <ul class="versions">
         <li class="version is-latest">
+          <a href="../../../revapi-java/0.28.3/index.html">0.28.3</a>
+        </li>
+        <li class="version">
           <a href="../../../revapi-java/0.28.2/index.html">0.28.2</a>
         </li>
         <li class="version">
@@ -830,6 +833,18 @@ of the components.</p>
 </div>
 </div>
 <div class="sect1">
+<h2 id="_release_notes"><a class="anchor" href="#_release_notes"></a><a href="news/20250415-revapi-java-bugfix.html" class="page">Release Notes</a></h2>
+<div class="sectionbody">
+<div class="paragraph news-date">
+<p>Tue, 15 Apr 2025</p>
+</div>
+<div class="paragraph news-summary">
+<p>This is a quick bugfix release of revapi-java fixing the new vararg check
+that was way too eager and incorrect flagging many false positives.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_release_notes"><a class="anchor" href="#_release_notes"></a><a href="news/20230315-release-notes.html" class="page">Release Notes</a></h2>
 <div class="sectionbody">
 <div class="paragraph news-date">
@@ -917,19 +932,6 @@ improvement where each difference now can a documentation link where it is discu
 </div>
 <div class="paragraph news-summary">
 <p>This is a small release of <code>revapi-java</code> (0.24.3) and <code>revapi-java-spi</code> (0.23.2) containing fix to a possible infinite loop while constructing a string representation of self-referencing type variables under certain circumstances. Thanks to <a href="https://github.com/hookyAt">hookyAt</a> user for reporting, diagnosis and reproduction steps.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_release_notes"><a class="anchor" href="#_release_notes"></a><a href="news/20210604-releases.html" class="page">Release Notes</a></h2>
-<div class="sectionbody">
-<div class="paragraph news-date">
-<p>Fri, 04 Jun 2021</p>
-</div>
-<div class="paragraph news-summary">
-<p>During the discussion in <a href="https://github.com/revapi/revapi/issues/221" class="bare">https://github.com/revapi/revapi/issues/221</a> it has come to light that Revapi doesn&#8217;t behave well when
-there are some classes missing from the classpath (in that particular case, transitive provided dependencies) and Revapi is
-configured to filter out these classes.</p>
 </div>
 </div>
 </div>
