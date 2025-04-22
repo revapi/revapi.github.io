@@ -104,7 +104,7 @@
                                 </a>
                             </li>
                             <li class="nav-item" data-depth="0">
-                                <a class="nav-link" href="../../../revapi-java/0.28.3/index.html">
+                                <a class="nav-link" href="../../../revapi-java/0.28.4/index.html">
                                     <span class="nav-text">Java Analyzer</span>
                                 </a>
                             </li>
@@ -431,6 +431,9 @@
       <span class="title">Java Analyzer</span>
       <ul class="versions">
         <li class="version is-latest">
+          <a href="../../../revapi-java/0.28.4/index.html">0.28.4</a>
+        </li>
+        <li class="version">
           <a href="../../../revapi-java/0.28.3/index.html">0.28.3</a>
         </li>
         <li class="version">
@@ -819,6 +822,19 @@
 <p>You can also get the news as the <a href="./_attachments/news.atom">RSS feed</a></p>
 </div>
 <div class="sect1">
+<h2 id="_release_notes"><a class="anchor" href="#_release_notes"></a><a href="news/20250422-release-notes.html" class="page">Release Notes</a></h2>
+<div class="sectionbody">
+<div class="paragraph news-date">
+<p>Tue, 22 Apr 2025</p>
+</div>
+<div class="paragraph news-summary">
+<p>This is again a tiny release of <code>revapi-java:0.28.4</code> that adds a configuration property to the new vararg overload
+check to ignore unchanged methods. This makes it easier for libraries with already released problematic methods
+to just not consider these as problems and not have to ignore/document them in the API changes.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_release_notes"><a class="anchor" href="#_release_notes"></a><a href="news/20250415-release-notes.html" class="page">Release Notes</a></h2>
 <div class="sectionbody">
 <div class="paragraph news-date">
@@ -921,17 +937,6 @@ improvement where each difference now can a documentation link where it is discu
 </div>
 <div class="paragraph news-summary">
 <p>A small but important release of <code>revapi-java</code> (version <code>0.24.4</code>) that improves the detection of binary incompatibilities on methods when a combination of generics and inheritance may produce binary incompatible changes that were not reported before.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_release_notes"><a class="anchor" href="#_release_notes"></a><a href="news/20210624-bugix-release.html" class="page">Release Notes</a></h2>
-<div class="sectionbody">
-<div class="paragraph news-date">
-<p>Thu, 24 Jun 2021</p>
-</div>
-<div class="paragraph news-summary">
-<p>This is a small release of <code>revapi-java</code> (0.24.3) and <code>revapi-java-spi</code> (0.23.2) containing fix to a possible infinite loop while constructing a string representation of self-referencing type variables under certain circumstances. Thanks to <a href="https://github.com/hookyAt">hookyAt</a> user for reporting, diagnosis and reproduction steps.</p>
 </div>
 </div>
 </div>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Varargs.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Java Analyzer</a> &gt; <a href="index.source.html" class="el_package">org.revapi.java.checks.methods</a> &gt; <span class="el_source">Varargs.java</span></div><h1>Varargs.java</h1><pre class="source lang-java linenums">/*
+ * Copyright 2014-2025 Lukas Krejci
+ * and other contributors as indicated by the @author tags.
+ *
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package org.revapi.java.checks.methods;
+
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.nio.charset.StandardCharsets;
+import java.util.Collections;
+import java.util.EnumSet;
+import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import javax.lang.model.type.TypeMirror;
+import javax.lang.model.util.Types;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import org.revapi.AnalysisContext;
+import org.revapi.Difference;
+import org.revapi.java.spi.CheckBase;
+import org.revapi.java.spi.Code;
+import org.revapi.java.spi.JavaMethodElement;
+import org.revapi.java.spi.Util;
+
+<span class="fc" id="L42">public final class Varargs extends CheckBase {</span>
+    private boolean reportUnchanged;
+
+    @Override
+    public void initialize(@Nonnull AnalysisContext analysisContext) {
+<span class="fc" id="L47">        super.initialize(analysisContext);</span>
+<span class="fc" id="L48">        JsonNode reportUnchanged = analysisContext.getConfigurationNode().path(&quot;reportUnchanged&quot;);</span>
+<span class="fc" id="L49">        this.reportUnchanged = reportUnchanged.asBoolean(true);</span>
+<span class="fc" id="L50">    }</span>
+
+    @Nullable
+    @Override
+    public String getExtensionId() {
+<span class="fc" id="L55">        return &quot;varargOverloadsOnlyDifferInVarargParameter&quot;;</span>
+    }
+
+    @Nullable
+    @Override
+    public Reader getJSONSchema() {
+<span class="fc" id="L61">        return new InputStreamReader(</span>
+<span class="fc" id="L62">                Objects.requireNonNull(getClass().getResourceAsStream(&quot;/META-INF/vararg-overloads-config-schema.json&quot;)),</span>
+                StandardCharsets.UTF_8);
+    }
+
+    @Override
+    public EnumSet&lt;Type&gt; getInterest() {
+<span class="fc" id="L68">        return EnumSet.of(Type.METHOD);</span>
+    }
+
+    @Override
+    protected void doVisitMethod(JavaMethodElement oldMethod, JavaMethodElement newMethod) {
+<span class="fc bfc" id="L73" title="All 4 branches covered.">        if (newMethod != null &amp;&amp; newMethod.getDeclaringElement().isVarArgs()) {</span>
+            // only proceed if we should report unchanged methods or if the method is new or has changed.
+<span class="pc bpc" id="L75" title="1 of 4 branches missed.">            if (reportUnchanged || oldMethod == null || !Util.toUniqueString(oldMethod.getModelRepresentation())</span>
+<span class="fc bfc" id="L76" title="All 2 branches covered.">                    .equals(Util.toUniqueString(newMethod.getModelRepresentation()))) {</span>
+<span class="fc" id="L77">                pushActive(oldMethod, newMethod);</span>
+            }
+        }
+<span class="fc" id="L80">    }</span>
+
+    @Override
+    protected List&lt;Difference&gt; doEnd() {
+<span class="fc" id="L84">        ActiveElements&lt;JavaMethodElement&gt; methods = popIfActive();</span>
+<span class="fc bfc" id="L85" title="All 2 branches covered.">        if (methods == null) {</span>
+<span class="fc" id="L86">            return null;</span>
+        }
+
+<span class="fc" id="L89">        JavaMethodElement method = methods.newElement;</span>
+<span class="fc" id="L90">        List&lt;? extends TypeMirror&gt; methodParams = method.getModelRepresentation().getParameterTypes();</span>
+
+<span class="fc" id="L92">        Types types = method.getTypeEnvironment().getTypeUtils();</span>
+
+<span class="fc" id="L94">        List&lt;JavaMethodElement&gt; methodsDifferingOnlyInVarargType = getOverloads(method).filter(m -&gt; {</span>
+<span class="pc bpc" id="L95" title="1 of 2 branches missed.">            if (!m.getDeclaringElement().isVarArgs()) {</span>
+<span class="nc" id="L96">                return false;</span>
+            }
+
+<span class="fc" id="L99">            List&lt;? extends TypeMirror&gt; thisParams = m.getModelRepresentation().getParameterTypes();</span>
+<span class="pc bpc" id="L100" title="1 of 2 branches missed.">            if (thisParams.size() != methodParams.size()) {</span>
+<span class="nc" id="L101">                return false;</span>
+            }
+
+<span class="fc bfc" id="L104" title="All 2 branches covered.">            for (int i = 0; i &lt; methodParams.size() - 1; ++i) {</span>
+<span class="pc bpc" id="L105" title="1 of 2 branches missed.">                if (!types.isSameType(methodParams.get(i), thisParams.get(i))) {</span>
+<span class="nc" id="L106">                    return false;</span>
+                }
+            }
+
+<span class="fc bfc" id="L110" title="All 2 branches covered.">            return !types.isSameType(methodParams.get(methodParams.size() - 1), thisParams.get(thisParams.size() - 1));</span>
+<span class="fc" id="L111">        }).collect(Collectors.toList());</span>
+
+<span class="pc bpc" id="L113" title="1 of 2 branches missed.">        if (!methodsDifferingOnlyInVarargType.isEmpty()) {</span>
+<span class="fc" id="L114">            return Collections.singletonList(createDifferenceWithExplicitParams(</span>
+                    Code.METHOD_VARARG_OVERLOADS_ONLY_DIFFER_IN_VARARG_PARAMETER,
+<span class="fc" id="L116">                    Code.attachmentsFor(methods.oldElement, method), methodsDifferingOnlyInVarargType.toString()));</span>
+        }
+
+<span class="nc" id="L119">        return null;</span>
+    }
+
+    private Stream&lt;JavaMethodElement&gt; getOverloads(JavaMethodElement method) {
+<span class="fc" id="L123">        return method.getParent().stream(JavaMethodElement.class, false).filter(m -&gt; m.getDeclaringElement()</span>
+<span class="fc" id="L124">                .getSimpleName().toString().equals(method.getDeclaringElement().getSimpleName().toString()));</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
