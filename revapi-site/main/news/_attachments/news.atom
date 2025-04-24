@@ -4,8 +4,8 @@
         <description><![CDATA[Full-featured API checker for Java and beyond]]></description>
         <link>https://revapi.org</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 24 Apr 2025 14:18:44 GMT</lastBuildDate>
-        <pubDate>Thu, 24 Apr 2025 14:18:44 GMT</pubDate>
+        <lastBuildDate>Thu, 24 Apr 2025 15:43:08 GMT</lastBuildDate>
+        <pubDate>Thu, 24 Apr 2025 15:43:08 GMT</pubDate>
         <item>
             <title><![CDATA[Release Notes]]></title>
             <description><![CDATA[This is again a tiny release of `revapi-java:0.28.4` that adds a configuration property to the new vararg overload
